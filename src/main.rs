@@ -4,7 +4,9 @@
 extern crate tomorrow_core;
 extern crate tomorrow_http;
 extern crate tomorrow_recuperator;
+
 extern crate recuperator_google_maps;
+extern crate recuperator_google;
 
 extern crate rocket;
 extern crate rocket_contrib;
@@ -19,5 +21,6 @@ mod services;
 fn main() {
     rocket::ignite()
         .mount("/services/maps", routes![services::maps::search])
+        .mount("/services/search", routes![services::search::search])
         .launch();
 }

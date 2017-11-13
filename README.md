@@ -6,8 +6,17 @@
 ## Quickstart 
 
 `tomorrow-api` requires the latest nightly version of the Rust toolchain.
-To override your toolchain configuration for this project only, use the following command:
+To override your toolchain configuration for this project, use the following command in the project's directory:
 
 ```sh
 $ rustup override set nightly
+```
+
+## Build
+
+In order to use `tomorrow-api` at its full potential, do not forget to build it in *release* mode:
+
+```sh
+$ cargo build --release
+$ ./target/release/tomorrow-api
 ```

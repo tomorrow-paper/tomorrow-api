@@ -7,6 +7,8 @@ authors = ["Valentin Fries <contact@fries.io>", "Vincent Milano <vincent_mot@hot
 tomorrow-core = {git = "https://github.com/tomorrow-paper/tomorrow-core"}
 tomorrow-http = {git = "https://github.com/tomorrow-paper/tomorrow-http"}
 tomorrow-recuperator = {git = "https://github.com/tomorrow-paper/tomorrow-recuperator"}
+
+recuperator-google = {git = "https://github.com/tomorrow-paper/recuperator-google"}
 recuperator-google-maps = {git = "https://github.com/tomorrow-paper/recuperator-google-maps"}
 
 rocket = "0.3.3"

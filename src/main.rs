@@ -15,12 +15,16 @@ extern crate serde;
 extern crate serde_json;
 #[macro_use] extern crate serde_derive;
 
+extern crate time;
+
 mod api_response;
 mod services;
+mod errors;
 
 fn main() {
     rocket::ignite()
         .mount("/services/maps", routes![services::maps::search])
         .mount("/services/search", routes![services::search::search])
+        .catch(errors![errors::not_found, errors::internal_server_error])
         .launch();
 }

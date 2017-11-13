@@ -11,9 +11,17 @@ pub struct ApiResponse<T> {
 
 impl <T> ApiResponse<T> where T: Serialize {
 
-    pub fn from_err(error: Error) -> Self {
+    pub fn as_err(message: &str, error: T) -> Self {
         ApiResponse {
             code: 1,
+            error: Some(String::from(message)),
+            result: Some(error)
+        }
+    }
+
+    pub fn from_err(error: Error) -> Self {
+        ApiResponse {
+            code: 2,
             error: Some(error.to_string()),
             result: None
         }

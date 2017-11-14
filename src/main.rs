@@ -7,6 +7,7 @@ extern crate tomorrow_recuperator;
 
 extern crate recuperator_google_maps;
 extern crate recuperator_google;
+extern crate recuperator_facebook;
 
 extern crate rocket;
 extern crate rocket_contrib;
@@ -25,6 +26,7 @@ fn main() {
     rocket::ignite()
         .mount("/services/maps", routes![services::maps::search])
         .mount("/services/search", routes![services::search::search])
+        .mount("/services/facebook", routes![services::facebook::public_search])
         .catch(errors![errors::not_found, errors::internal_server_error])
         .launch();
 }

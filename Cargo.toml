@@ -10,6 +10,7 @@ tomorrow-recuperator = {git = "https://github.com/tomorrow-paper/tomorrow-recupe
 
 recuperator-google = {git = "https://github.com/tomorrow-paper/recuperator-google"}
 recuperator-google-maps = {git = "https://github.com/tomorrow-paper/recuperator-google-maps"}
+recuperator-facebook = {git = "https://github.com/tomorrow-paper/recuperator-facebook"}
 
 rocket = "0.3.3"
 rocket_codegen = "0.3.3"
